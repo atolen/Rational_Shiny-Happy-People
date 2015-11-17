@@ -49,7 +49,6 @@ public class Rational {
     public void multiply( Rational r ) {
 	int n = this.numerator * r.getNumerator();
 	int d = this.denominator * r.getDenominator();
-	//	return this.toString();
 	this.setNumerator( n );
 	this.setDenominator( d );
     }
