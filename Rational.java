@@ -1,3 +1,8 @@
+/* Team Shiny Happy People -- Shamaul Dilmohamed, Anna Tolen
+APCS1 pd10
+HW32 -- Irrationality Stops Here
+2015-11-17 */
+
 public class Rational {
     // instvars
     private int numerator;
