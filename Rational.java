@@ -1,4 +1,4 @@
-/* Team Angry Inch -- Anna Tolen
+/* Team sadghostclub -- Anna Tolen
 APCS1 pd10
 HW33 -- Do You Even Add, Bro?
 2015-11-18 */
@@ -13,6 +13,15 @@ public class Rational {
 	setN( 0 );
 	setD( 1 );
     }
+
+    public Rational( int n, int d ) {
+	this();
+	if( d != 0 ) {
+	    setN( n );
+	    setD( d );
+	}
+    }
+		
     // mutators
     public void setN( int newN ) {
 	n = newN;
@@ -74,7 +83,38 @@ public class Rational {
 	setN( n / gcd );
 	setD( d / gcd );
     }
-        
+
+    /*     public static int gcd( int a, int b ) {
+	int c = (a % b);
+	while( c != 0 ) {
+	    a = b;
+	    b = c;
+	    c = (a % b);
+	} 
+	return b;
+	} */
+    
+    public int compareTo( Rational r ) {
+	if( this.floatValue() == r.floatValue() )
+	    return 0;
+	else if( this.floatValue() > r.floatValue() )
+	    return 1;
+	else
+	    return -1;
+    }
+
+    public static void main( String[] args ) {
+	Rational r = new Rational(2,3); //Stores the rational number 2/3
+	Rational s = new Rational(1,2); //Stores the rational number 1/2
+	Rational t = new Rational(4,18); //Stores the rational number 4/18
+	r.add(s);  //Adds r to s, changes r to 7/6.  s remains 1/2
+	t.reduce(); //Changes t to 2/9
+	System.out.println( r + "\tshould be 7/6" );
+	System.out.println( s + "\tshould be 1/2" );
+	System.out.println( t + "\tshould be 2/9" );
+	System.out.println( r.compareTo(s) + "\tshould be 1" );
+    }
+    
 } // close class Rational
 
 	    
