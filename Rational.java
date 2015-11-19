@@ -1,4 +1,4 @@
-/* Team sadghostclub -- Anna Tolen
+/* Anna Tolen
 APCS1 pd10
 HW33 -- Do You Even Add, Bro?
 2015-11-18 */
@@ -21,7 +21,7 @@ public class Rational {
 	    setD( d );
 	}
     }
-		
+    
     // mutators
     public void setN( int newN ) {
 	n = newN;
@@ -67,7 +67,9 @@ public class Rational {
     }
 
     // employs Euclid's algorithm iteratively
-    public int gcd( int a, int b ) {
+    public int gcd() {
+	int a = n;
+	int b = d;
 	int c = (a % b);
 	while( c != 0 ) {
 	    a = b;
@@ -77,22 +79,16 @@ public class Rational {
 	return b;
     } 
 
-    
+    public static int gcd( int n, int d ) {
+	Rational r = new Rational(n,d);
+	return r.gcd();
+    }
     public void reduce() {
-	int gcd = gcd( Math.max(n,d) , Math.min(n,d) );
+	int gcd = gcd( n,d );
 	setN( n / gcd );
 	setD( d / gcd );
     }
 
-    /*     public static int gcd( int a, int b ) {
-	int c = (a % b);
-	while( c != 0 ) {
-	    a = b;
-	    b = c;
-	    c = (a % b);
-	} 
-	return b;
-	} */
     
     public int compareTo( Rational r ) {
 	if( this.floatValue() == r.floatValue() )
