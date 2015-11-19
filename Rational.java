@@ -1,4 +1,4 @@
-/* Anna Tolen
+/* Team Shiny Happy People -- Leo Auyeung, Anna Tolen
 APCS1 pd10
 HW33 -- Do You Even Add, Bro?
 2015-11-18 */
