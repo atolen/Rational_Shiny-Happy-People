@@ -116,6 +116,7 @@ public class Rational implements Comparable {
 	Rational r = new Rational(2,3); //Stores the rational number 2/3
 	Rational s = new Rational(1,2); //Stores the rational number 1/2
 	Rational t = new Rational(4,18); //Stores the rational number 4/18
+
 	Rational v = new Rational(4,8);
 	Object a = 42;
 	Object b = "hi";
