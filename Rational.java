@@ -4,6 +4,7 @@ HW41 -- In America, the Driver Sits on the Left
 2015-12-03 */
 
 public class Rational implements Comparable {
+    
     // instvars
     private int n;
     private int d;
@@ -89,7 +90,6 @@ public class Rational implements Comparable {
 	setD( d / gcd );
     }
 
-    
     public int compareTo( Object r ) {
 	if( (this.n * ((Rational)r).d ) > ( ((Rational)r).n * this.d ) )
 	    return 1;
